@@ -1,11 +1,35 @@
 <html>
     <head>
+        
         <title>{{Title}}</title>
-        <link rel="stylesheet" href="../style.css" />
+    
+        <link rel="stylesheet" href="static/style.css" />
     </head>
 
     <body>
+        <header>
+        <div id="logo">
         <h1>{{Heading}}</h1>
+        </div>
+        </header>
+        <main>
+        <nav>
+            <ul>
+                <li>
+                    <a href="http://127.0.0.1:4999/orders">Home</a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:4999/orders/0">Zelda</a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:4999/orders/1">Resident Evil</a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:4999/orders/2">Sonic</a>
+                </li>
+            </ul>
+        </nav>
+
         {% for order in orders %}
 
         <p>
@@ -13,6 +37,19 @@
         <a href = 'http://127.0.0.1:4999/orders/{{orders.index(order)}}'> {{order.title}} by {{order.publisher}}</a>
         </p>
         {% endfor %}
+        </main>
+        <footer class="footer">
+            <h3>
+                Cammy's Video Game Store
+            </h3>
+            <ul class="links">
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="http://127.0.0.1:4999/static"> Gallery</a></li>
+                <li><a href="#"> Contact</a></li>
+            </ul>
+
+        </footer>
 
     </body>
 </html>

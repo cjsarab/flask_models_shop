@@ -1,10 +1,20 @@
 <html>
     <head>
         <title>{{Title}}</title>
-        <link rel="stylesheet" href="../style.css">
+
+        <link rel="stylesheet" href="static/style.css" />
     </head>
     <body>
+        <header>
         <h1>{{order.title}}</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="http://127.0.0.1:4999/orders">Home</a>
+                </li>
+            </ul>
+        </nav>
 
         <p> {{order.customer_name}} ordered {{order.quantity}} copies of {{order.title}} by {{order.publisher}}.
         </p>
