@@ -10,3 +10,7 @@ def index():
 def order(index):
     order = orders[int(index)]
     return render_template('order.html', Title="Order", order = order)
+
+@app.route('/static')
+def images():
+    return render_template('images.html',Title = "Gallery")

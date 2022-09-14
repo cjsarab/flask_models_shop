@@ -12,7 +12,6 @@
         <h1>{{Heading}}</h1>
         </div>
         </header>
-        <main>
         <nav>
             <ul>
                 <li>
@@ -29,13 +28,17 @@
                 </li>
             </ul>
         </nav>
+        <main>
 
         {% for order in orders %}
+        <br>
+        on {{order.order_date}}:
 
         <p>
-        {{order.customer_name}} on {{order.order_date}} ordered {{order.quantity}} copies of 
-        <a href = 'http://127.0.0.1:4999/orders/{{orders.index(order)}}'> {{order.title}} by {{order.publisher}}</a>
+        {{order.customer_name}} ordered {{order.quantity}} copies of 
+        <a href = 'http://127.0.0.1:4999/orders/{{orders.index(order)}}'> {{order.title}}</a> by {{order.publisher}}.
         </p>
+        <br>
         {% endfor %}
         </main>
         <footer class="footer">
