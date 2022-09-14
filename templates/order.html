@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>{{Title}}</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <h1>{{order.title}}</h1>
+
+        <p> {{order.customer_name}} ordered {{order.quantity}} copies of {{order.title}} by {{order.publisher}}.
+        </p>
+        <p>
+            Date: {{order.order_date}}
+        </p>
+        <br>
+        <p>
+        <img src='../static/Zelda.avif' alt='Pic of order'>
+        </p>
+    </body>
+</html>

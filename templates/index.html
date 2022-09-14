@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>{{Title}}</title>
+        <link rel="stylesheet" href="../style.css" />
+    </head>
+
+    <body>
+        <h1>{{Heading}}</h1>
+        {% for order in orders %}
+
+        <p>
+        {{order.customer_name}} on {{order.order_date}} ordered {{order.quantity}} copies of 
+        <a href = 'http://127.0.0.1:4999/orders/{{orders.index(order)}}'> {{order.title}} by {{order.publisher}}</a>
+        </p>
+        {% endfor %}
+
+    </body>
+</html>
